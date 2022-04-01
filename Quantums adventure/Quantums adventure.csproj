@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -63,12 +64,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Infrastructure\CellToScreenConverter.cs" />
+    <Compile Include="Infrastructure\DirectionToMatrixConverter.cs" />
+    <Compile Include="Infrastructure\PropertyChangedBase.cs" />
+    <Compile Include="Infrastructure\TerrainTileConverter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="model\Apple.cs" />
+    <Compile Include="model\CellLocation.cs" />
+    <Compile Include="model\Facing.cs" />
+    <Compile Include="model\Game.cs" />
+    <Compile Include="model\GameBase.cs" />
+    <Compile Include="model\GameField.cs" />
+    <Compile Include="model\GameObject.cs" />
+    <Compile Include="model\MovingActor.cs" />
+    <Compile Include="model\Player.cs" />
+    <Compile Include="model\Tank.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -93,6 +108,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pavement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StoneWall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WoodWall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pavement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="plain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StoneWall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Tank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WoodWall.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
